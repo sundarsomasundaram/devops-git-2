@@ -31,7 +31,6 @@ pipeline {
     stage('Deploy') {
       steps {
         echo 'Deploying'
-        sh 'jenkins/deploy.sh'
       }
     }
 
