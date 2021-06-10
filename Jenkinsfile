@@ -5,6 +5,9 @@ pipeline {
       steps {
         echo 'Building'
         sh 'jenkins/build.sh'
+        node(label: 'node1')
+        tool(name: 'maven', type: 'build')
+        dockerNode(image: 'maven:3.3-jdk-8')
       }
     }
 
